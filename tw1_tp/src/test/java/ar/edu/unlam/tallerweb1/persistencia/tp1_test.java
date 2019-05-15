@@ -371,7 +371,7 @@ public class tp1_test extends SpringTest {
 
 		session.save(tokio);
 		session.save(japon);
-		
+
 		// HemisferioSUR
 		List<Ciudad> lista = getSession().createCriteria(Ciudad.class)
 				.createAlias("ugeo","coordenadas")
@@ -382,8 +382,7 @@ public class tp1_test extends SpringTest {
 		assertThat(lista.get(0).getNombre()).isEqualTo("Buenos Aires");
 		assertThat(lista.get(0).getUgeo().getLatitud()).isLessThanOrEqualTo(0.00);
 		assertThat(lista.get(0).getUgeo().getLatitud()).isEqualTo(-34.6131500);
-		
-		
+
 	}
 }
 
